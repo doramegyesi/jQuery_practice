@@ -56,6 +56,18 @@
                     fontWeight:"bold",
                     opacity: 0.5
                 });
+                $("#btn1").html("first button").on("click", function() {
+                    $("#panel1").slideToggle(300);
+                });
+                $("#btn2").on("mouseover", function() {
+                    $("#panel2").fadeToggle(300);
+                });
+                $("#btn3").on("click", function() {
+                    $("#panel3").slideToggle(300);
+                });
+                $("#btn4").on("click", function() {
+                    $("#panel4").slideToggle(300);
+                });
             });
         </script>
     </body>
