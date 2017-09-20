@@ -50,11 +50,12 @@
         <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
         <script>
             $(document).ready(function(){
+                var content = "Some awesome stuff";
                 $(".panel-button").on("click", function() {
                     var panelId = $(this).attr("data-panelid");
                     $("#"+panelId).slideToggle();
+                    $("#"+panelId+" .panel-body").text(content);
                 });
-
             });
         </script>
     </body>
