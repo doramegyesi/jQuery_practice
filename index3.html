@@ -52,13 +52,15 @@
                     //figure out thich panel to show
                     var panelToShow = $(this).attr('rel'); //this = li that got clicked
                     console.log(panelToShow);
-                    //hide current panel and show the new one
-                    $(".tab-panels .panel.active").slideUp(500, function(){
+                    //hide current panel
+                    $(".tab-panels .panel.active").slideUp(500, showNext);
+                    //show the new one
+                    function showNext(){
                         $(this).removeClass("active"); //this = the active panel sliding up
                         $("#"+panelToShow).slideDown(500, function() { //this = panelToShow
                             $(this).addClass("active");
                         });
-                    });
+                    }
                 });
             });
         </script>
